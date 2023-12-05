@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "tahoma";
+    src: url("fonts/tahoma.woff2") format("woff2");
+    src: url("fonts/tahomabd.woff2") format("woff2");
+    src: url("fonts/Tahoma.ttf") format("truetype");
+  }
+  header {
+    /* Autres styles pour votre en-tête */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: url(../assets/images/FondHeader.jpg); /* Remplacez 'votre-image.jpg' par le chemin de votre image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'en-tête */
+    border-radius: 15px;
+  }
+  #imgage1 {
+    cursor: pointer;
+  }
+  .rounded-image {
+    border-radius: 50%;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 250px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: large;
+    color: whitesmoke;
+    padding: 20px;
+  
+

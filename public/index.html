@@ -1,17 +1,85 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="../src/assets/style.css">
+    <title>Portfolio Sarita BELHAJ</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <header>
+    <a href="#accueil">
+      <img id="image1" src="../src/assets/images/LogoPL.jpg" alt="Logo" class="rounded-image">
+    </a>
+
+    <!-- Menu avec des liens d'ancrage -->
+    <nav>
+      <ul>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#creations">Créations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main> 
+      <div id="app">
+
+        <section id="presentation">
+          <h2>Sarita BELHAJ</h2>
+          <h2>Présentation</h2>
+          <p>Une courte présentation ici...</p>
+        </section>
+
+        <section id="creations">
+          <h2>Mes Créations</h2>
+        
+          <div class="creation">
+            <img src="chemin/vers/image2.jpg" alt="Création 1">
+            <h3>Titre de la Création 1</h3>
+            <button onclick="ouvrirModal('creation1')">Voir plus</button>
+          </div>
+
+          <div class="creation">
+            <img src="chemin/vers/image3.jpg" alt="Création 2">
+            <h3>Titre de la Création 2</h3>
+            <button onclick="ouvrirModal('creation2')">Voir plus</button>
+          </div>
+
+          <div class="creation">
+            <img src="chemin/vers/image4.jpg" alt="Création 3">
+            <h3>Titre de la Création 2</h3>
+            <button onclick="ouvrirModal('creation2')">Voir plus</button>
+          </div>
+          
+          <div id="modal" class="modal">
+            <!-- Contenu de la modal (à définir) -->
+          </div>
+
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <form id="contactForm" onsubmit="envoyerFormulaire(); return false;">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+  
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+  
+            <label for="objet">Objet :</label>
+            <input type="text" id="objet" name="objet" required>
+  
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+  
+            <button type="submit">Envoyer</button>
+          </form>
+        </section>
+      </div>
+      </main>
+    <footer>
+      <p>&copy; 2023 Portfolio Sarita BELHAJ. Tous droits réservés.</p>
+    </footer>
   </body>
 </html>
